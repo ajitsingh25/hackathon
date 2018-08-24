@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<strong style="font-family: arial, helvetica, sans-serif; font-size: 14px;"><span style="color: rgb(0, 0, 255);">Vulnerability :</span></strong><font face="arial, helvetica, sans-serif"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp; </span></font><strong style="font-size: 14px; font-family: arial, helvetica, sans-serif;"><span style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);">ClickJacking (URL Redress Attack)</span></strong></p>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><strong><span style="color: rgb(0, 0, 255);"><span style="font-size: 14px;"><span style="line-height: 22.4px; background-color: rgb(255, 255, 255);">Severity</span></span><span style="font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">: &nbsp;</span></span><span style="color: rgb(255, 0, 0);"><span style="font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HIGH</span></span></strong></span></p>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);"><strong><span style="font-size: 14px;">Description</span>:&nbsp;</strong></span></span></p>
+		<div>
+			1. Attacker uses multiple transparent or opaque layers to trick a user into clicking on a button or link on another page when they were intending to click on the the top level page.</div>
+		<div>
+			2. With a carefully crafted combination of stylesheets, iframes, and text boxes, a user can be led to believe they are typing in the password to their email or bank account, but are instead typing into an invisible frame controlled by the attacker</div>
+		<div>
+			&nbsp;</div>
+		<p>
+			<strong style="font-family: arial, helvetica, sans-serif;"><span style="color: rgb(0, 0, 255);"><span style="font-size:14px;">Remediation</span>:</span></strong></p>
+		<div>
+			1. Sending the proper X-Frame-Options HTTP response headers that instruct the browser to not allow framing from other domains</div>
+		<div>
+			2. Employing defensive code in the UI to ensure that the current frame is the most top level window</div>
+		<div>
+			&nbsp;</div>
+		<p>
+			<span style="font-size:14px;"><span style="font-family: arial,helvetica,sans-serif;"><strong><span style="color: rgb(0, 0, 255);">Further reading:</span></strong></span></span></p>
+		<p>
+			<a href="https://www.owasp.org/index.php/SQL_Injection">https://www.owasp.org/index.php/Clickjacking</a></p>
+	</body>
+</html>

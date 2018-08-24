@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 14px;"><strong><span style="color: rgb(0, 0, 255);">Vulnerability :</span></strong>&nbsp;&nbsp;&nbsp; <strong><span style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);">HTTPOnly</span></strong></span></span></p>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><strong><span style="color: rgb(0, 0, 255);"><span style="font-size: 14px;"><span style="line-height: 22.4px; background-color: rgb(255, 255, 255);">Severity</span></span><span style="font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">: &nbsp;</span></span><span style="color: rgb(255, 0, 0);"><span style="font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIGH</span></span></strong></span></p>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);"><strong><span style="font-size: 14px;">Description</span>:&nbsp;</strong></span></span></p>
+		<p>
+			1. HttpOnly is an additional flag included in a Set-Cookie HTTP response header<br />
+			2. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it)</p>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><strong><span style="color: rgb(0, 0, 255);">Remediation:</span></strong></span></p>
+		<p>
+			Set the HttpOnly cookie attribute for the sessionCookie. This can be set as below.<br />
+			1. Set the HttpOnly cookie programmitically<br />
+			2. Set it for SessionCookie in the Application Server descriptor files</p>
+		<p>
+			<span style="font-family: arial,helvetica,sans-serif;"><strong><span style="color: rgb(0, 0, 255);">Further reading:</span></strong></span></p>
+		<p>
+			<a href="https://www.owasp.org/index.php/HttpOnly">https://www.owasp.org/index.php/HttpOnly</a></p>
+	</body>
+</html>

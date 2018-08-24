@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<span style="font-size: 14px;"><strong><span style="color: rgb(0, 0, 255);">Vulnerability :</span></strong>&nbsp;&nbsp;&nbsp; <strong><span style="color: rgb(34, 34, 34); font-family: arial,sans-serif; background-color: rgb(255, 255, 255);">Weak Ciphers</span></strong></span></p>
+		<p>
+			<strong><span style="color: rgb(0, 0, 255);"><span style="font-size: 14px;"><span style="font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">Severity</span></span><span style="font-family: sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">: &nbsp;</span></span><span style="color: rgb(255, 0, 0);"><span style="font-family: sans-serif; font-size: 14px; line-height: 22.4px; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIGH</span></span></strong></p>
+		<p>
+			<span style="color: rgb(0, 0, 255);"><strong><span style="font-size: 14px;">Description</span>:&nbsp;</strong></span></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">1.&nbsp;</span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">Occurs if the HTTP protocol is used to transmit sensitive information (e.g. credentials transmitted over HTTP). HTTP protocol does not ensure&nbsp;confidentiality of the data.</span></span></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">2.&nbsp;</span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">When the SSL/TLS service is present it is good but it increments the attack surface and the following vulnerabilities exist:</span></span></p>
+		<ul style="line-height: 1.5em; margin: 0.3em 0px 0px 1.6em; padding: 0px; list-style-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAANAQMAAABb8jbLAAAABlBMVEX///8AUow5QSOjAAAAAXRSTlMAQObYZgAAABNJREFUCB1jYEABBQw/wLCAgQEAGpIDyT0IVcsAAAAASUVORK5CYII=&quot;); color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">
+			<li style="margin-bottom: 0.1em;">
+				<span style="font-size: 12px;">SSL/TLS protocols, ciphers, keys and renegotiation must be properly configured.</span></li>
+			<li style="margin-bottom: 0.1em;">
+				<span style="font-size: 12px;">Certificate validity must be ensured.</span></li>
+		</ul>
+		<p>
+			<strong><span style="color: rgb(0, 0, 255);">Remediation:</span></strong></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">1. </span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">Weak ciphers must not be used; no NULL ciphers suite, due to no encryption used; no Anonymous Diffie-Hellmann, due to not provides authentication.</span></span></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; background-color: rgb(255, 255, 255);">2.&nbsp;</span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">Weak protocols must be disabled.</span></span></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">3.&nbsp;</span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">Renegotiation must be properly configured </span></span></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">4.&nbsp;</span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">X.509 certificates key length must be strong (e.g. if RSA or DSA is used the key must be at least 1024 bits).</span></span></p>
+		<p>
+			<span style="font-size: 12px;"><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">5.&nbsp;</span><span style="color: rgb(37, 37, 37); font-family: sans-serif; line-height: 21px; background-color: rgb(255, 255, 255);">X.509 certificates must be signed only with secure hashing algoritms (e.g. not signed using MD5 hash, due to known collision attacks on this hash).</span></span></p>
+		<p>
+			<strong><span style="color: rgb(0, 0, 255);">Further reading:</span></strong></p>
+		<p>
+			<span style="font-size: 12px;"><a href="https://www.owasp.org/index.php/Testing_for_Weak_SSL/TLS_Ciphers,_Insufficient_Transport_Layer_Protection_(OTG-CRYPST-001)#Summary">https://www.owasp.org/index.php/Testing_for_Weak_SSL/TLS_Ciphers,_Insufficient_Transport_Layer_Protection_(OTG-CRYPST-001)#Summary</a></span></p>
+		<p>
+			&nbsp;</p>
+	</body>
+</html>
